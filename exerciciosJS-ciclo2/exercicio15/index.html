@@ -1,0 +1,64 @@
+<!-- 
+Refatore o exercício anterior, usando a mesma função “tabuada” para receber o valor de um elemento de entrada input. 
+
+a) A função será executada quando o usuário clicar no botão
+b) Todas as mensagens de retorno deverão ser mostradas na página em um “el” html
+
+Nota: não use o métodos documento.write como método de saída.
+
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+    <script src="script.js"></script>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aquamarine;
+        }
+
+        h1{
+            color: red;
+        }
+
+        #button{
+            border: 2px solid red;
+            background-color: yellow;
+            width: 200px;
+            height: 50px;
+        }
+
+
+
+        #resultado{
+            border: black 3px solid;
+            background-color: rgb(248, 162, 131);
+            width: 35%;
+            height: auto;
+            padding: 30px;
+        }
+
+
+    </style>
+    </head>
+
+
+ <body>
+    
+    <h1>TABUADA</h1>
+    <label for="tabuada">DIGITE UM NÚMERO</label>
+    <input type="text" value="" name="tabuada" id="nbr">
+    <input type="button" value="CALCULAR" id="button">
+    <div>Resultado: <div id="resultado"> </div>  </div>
+
+
+
+ </body>
+ </html>

@@ -1,0 +1,58 @@
+<!-- 1. Crie uma função que: 
+a) Conte quantos carácteres uma palavra possui
+b) Converta esta mesma palavra para MAIÚSCULA 
+c) Imprima somente a 3º letra desta palavra
+d) Troque esta mesma letra da palavra pela letra “X”
+
+Exemplo da saída da função: 
+Esta palavra tem 7 carácteres
+A palavra marcelo ficou MARCELO
+A letra R é o 3º carácter da palavra MARCELO
+MARCELO ficou MAXCELO  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    
+    function ex12(stringExemplo, substitui){
+        console.log("Esta string possui ", stringExemplo.length, " caracteres.");
+        console.log(stringExemplo.toUpperCase());
+        console.log("A terceira letra desta string é...: ", stringExemplo[2]);
+        let novaString = stringExemplo.replace(stringExemplo[2] , substitui);
+        console.log(novaString);
+
+
+    }
+
+    var string = prompt("Escreva uma frase");
+    var letra = prompt("Escreva uma letra qualquer");
+
+    console.log(ex12(string,letra));
+
+
+// RESULTADO
+// Esta string possui  9  caracteres.
+// (índice):27 OLÁ MUNDO
+// (índice):28 A terceira letra desta string é...:  á
+// (índice):30 OlX mundo
+// (índice):38 undefined
+
+
+
+
+
+</script>
+
+
+<body>
+    
+</body>
+</html>

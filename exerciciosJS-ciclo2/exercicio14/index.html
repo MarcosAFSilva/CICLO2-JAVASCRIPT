@@ -1,0 +1,54 @@
+<!-- 
+Crie um programa, por meio de uma função, que receberá um objeto como parâmetro. 
+Esta função deverá ter como saída o nome das propriedades e seus respectivos valores. 
+O objeto irá conter uma relação de frutas e seus preços.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+<script>
+
+
+    let frutas = [
+        {item: 1, tipo: "Pera", preço: 9.99},
+        {item: 2, tipo: "Uva", preço: 7.99},
+        {item: 3, tipo: "Abacaxi",preço: 8.99},
+    ]
+    
+
+    function listaFrutas (f){
+
+        for (let produto of f){
+            for (let p in produto){
+                console.log(`${p} -> ${produto[p]}`);
+            }
+        }
+
+    }
+
+
+    console.log(listaFrutas(frutas));
+
+    // adiçoes no codigo
+
+    let indice = prompt("A lista possui " +frutas.length+ " itens. Digite o número do item da lista que deseja exibir");
+    let item = indice-1;
+    
+console.log(frutas[item]); //Exibe o item da lista pela numeraçao selecionada
+
+console.log(frutas); //Exibe a lista inteira
+
+</script>
+
+
+
+ <body>
+     
+ </body>
+ </html>

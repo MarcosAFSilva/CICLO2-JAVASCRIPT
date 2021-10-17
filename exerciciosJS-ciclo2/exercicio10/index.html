@@ -1,0 +1,74 @@
+<!-- Crie uma função que irá pedir “use o prompt”: a altura, o peso e o Nome. Esta função deverá calcular o índice de IMC (fórmula peso dividido pelo dobro da altura). A função deverá apresentar os resultados escrito em uma página HTML. Exemplo: 
+
+Nome: Fulano
+Altura: 1.80
+Peso: 90
+IMC: 27.80
+   -->
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+   </head>
+
+   <script>
+
+    function calculoIMC(nome, altura, peso){
+        let imcUsuario = peso / (altura**2);
+
+
+        document.write("Olá, " +nome+ ". Seu IMC é de " +imcUsuario);
+
+
+
+        if (imcUsuario<18.5){
+        document.write("Seu IMC está ABAIXO DO PESO");
+    } else {
+        if (imcUsuario<25){
+            document.write("Seu IMC é de PESO NORMAL");
+        } else {
+            if (imcUsuario<30){
+                document.write("Seu IMC é de SOBREPESO");
+            } else {
+                if (imcUsuario<35){
+                    document.write("Seu IMC é de OBESIDADE GRAU I");
+                } else {
+                    if (imcUsuario<40){
+                        document.write("Seu IMC é de OBESIDADE GRAU II");
+                    } else {
+                        if (imcUsuario>39.9) {
+                            document.write("Seu IMC é de OBESIDADE GRAU III ou OBESIDADE MÓRBIDA");
+                        } else {
+                            document.write("VALOR INVÁLIDO");}
+                        }
+                        }
+                    }
+                }
+      
+            }
+
+    }
+    
+    
+    
+    
+    nomeUsuario = prompt("Digite seu nome");
+    alturaUsuario = prompt("Digite seu peso");
+    pesoUsuario = prompt("Digite seu peso");
+    
+    
+    calculoIMC(nomeUsuario, alturaUsuario, pesoUsuario);
+
+  
+                
+   </script>
+
+
+   <body>
+       
+   </body>
+   </html>

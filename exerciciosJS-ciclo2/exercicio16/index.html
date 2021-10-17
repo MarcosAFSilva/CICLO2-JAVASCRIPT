@@ -1,0 +1,99 @@
+<!-- Crie uma função que some dois valores. 
+a) Os valores serão adicionados em dois elementos inputs
+b) O resultado será apresentado em um terceiro elemento input 
+c) A soma será efetuada quando perder o foco do segundo input
+
+ 
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+
+ <script>
+     window.onload = function(){
+        const num1 = document.querySelector("#primeiroNumero");
+        const num2 = document.querySelector("#segundoNumero");
+        const result = document.querySelector("#resultado");
+
+        num2.addEventListener("blur", function(){
+            soma();
+        });
+
+
+
+        function soma(){
+            let a = Number(num1.value);
+            let b = Number(num2.value);
+
+            if (isNaN(a+b)){
+                alert("Digite um número válido para somar");
+            } else {
+                result.value = `A soma dos dois números é igual a ${a + b}`;
+            }
+        }
+
+     }
+ </script>
+
+<style>
+    body{
+        background-color: beige;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #somatorio{
+        display: flex;
+    }
+
+    label{
+        padding: 20px;
+    }
+
+
+    input{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    #resultado{
+        width: 400px;
+        height: 80px;
+        border: black 3px solid;
+        margin: 10px;
+        background-color: tomato;
+        text-align: justify;
+        color: white;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+</style>
+
+
+ <body>
+     
+    <h1>SOMAR DOIS NÚMEROS</h1>
+<div id="somatorio">
+        <label for="primeiroNumero">Digite um número --></label>
+        <input type="text" name="primeiroNumero" id="primeiroNumero">
+        
+        <br>
+        <label for="segundoNumero">Digite outro número --></label>
+        <input type="text" name="segundoNumero" id="segundoNumero">
+        
+    </div>
+    <br>
+
+
+    <label for="resultado"> RESULTADO :</label>
+    <input type="text" name="resultado" id="resultado" disabled>
+</div>
+ </body>
+ </html>

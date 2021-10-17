@@ -1,0 +1,57 @@
+<!-- 
+Crie uma função que receba um parâmetro que receba um valor entre 1 e 10 e efetue a tabuada. 
+
+a) A função deverá verificar se o parâmetro é um número
+b) A função deverá verificar se o parâmetro está entre 1 e 10 
+c) O resultado sairá no console 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>TABUADA BASICA</title>
+ </head>
+
+ <script>
+     var numero = Number(prompt("Digite o número da tabuada que deseja efetuar (inteiro de 1 a 10"));
+     var i = 0
+
+    function tabuada(){
+        
+        console.log(`O número selecionado é ${numero}`);
+        do {
+            i++;
+            console.log(`${numero} vezes ${i} é igual a ${numero*i}`);
+        } while (i<10);
+
+
+
+        // RESULTADO NO CONSOLE:
+
+//         O número selecionado é 2
+// (índice):27 2 vezes 1 é igual a 2
+// (índice):27 2 vezes 2 é igual a 4
+// (índice):27 2 vezes 3 é igual a 6
+// (índice):27 2 vezes 4 é igual a 8
+// (índice):27 2 vezes 5 é igual a 10
+// (índice):27 2 vezes 6 é igual a 12
+// (índice):27 2 vezes 7 é igual a 14
+// (índice):27 2 vezes 8 é igual a 16
+// (índice):27 2 vezes 9 é igual a 18
+// (índice):27 2 vezes 10 é igual a 20
+        
+      
+    }
+
+
+tabuada();
+ </script>
+
+
+ <body>
+     
+ </body>
+ </html>

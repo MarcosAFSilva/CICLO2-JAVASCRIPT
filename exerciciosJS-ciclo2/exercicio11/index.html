@@ -1,0 +1,59 @@
+<!-- 
+1. Criar um array de uma lista de nomes com o mínimo de 5 elementos; 
+2. Criar uma função que receberá: 
+	→   3 parâmetros; um parâmetro será para enviar o array, 
+    o segundo parâmetros será para enviar um novo nome para o array, que deverá ser inserido na lista de nomes. 
+    O terceiro parâmetro será enviado um número inteiro, que servirá de índice para que seja impresso no console um 
+    determinado nome que está na lista do array.  
+
+A saída da função deverá ser: 
+Quantidade de elementos do array…: 6
+Você escolheu o índice 2 que é o elemento Mariana
+A quantidade atual de elementos do array é de..: 7 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+    
+    
+    function ex11(listaNomes, novoNome, indiceLista){
+        
+        
+        console.log("A quantidade de pessoas marcadas como Família é de...: ", listaNomes.length);
+        console.log("Você escolheu o índice ", indiceLista , " que é o elemento ", listaNomes[indiceLista]);
+        console.log(`O nome ${novoNome} foi inserido na lista`);
+        listaNomes.push(novoNome);
+        console.log(listaNomes);
+        console.log("A nova quantidade de elementos na lista de Família é de...:", listaNomes.length);
+       }
+    
+    var lista = ["Marcos", "Antonio", "Vaneide", "André", "Emanuelly"];
+    newName = prompt("Digite um nome");
+    indice = prompt("Digite um número de 0 a 4");
+
+    ex11(lista, newName, indice);
+
+
+// RESULTADO:
+
+// A quantidade de pessoas marcadas como Família é de...:  5
+// (índice):33 Você escolheu o índice  2  que é o elemento  Vaneide
+// (índice):34 O nome Angélica foi inserido na lista
+// (índice):36 (6) ['Marcos', 'Antonio', 'Vaneide', 'André', 'Emanuelly', 'Angélica']
+// (índice):37 A nova quantidade de elementos na lista de Família é de...: 6
+
+</script>
+<body>
+    
+</body>
+</html>

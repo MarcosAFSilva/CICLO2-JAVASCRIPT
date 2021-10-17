@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <script>
+        
+
+    //     var idade = prompt("Escreva sua idade");
+    //     var idadeParametro1 = 12
+    //     var idadeParametro2 = 18
+    //     var idadeParametro3 = 60
+
+    // //     if(idade < idadeParametro1){
+    // //         document.write("O usuário é uma criança");
+    // //     } else {
+    // //         if(idade < idadeParametro2){
+    // //             document.write("O usuário é um adolescente");
+    // //         } else {
+    // //             if(idade < idadeParametro3){
+    // //                 document.write("O usuário é um adulto");
+    // //         } else {
+    // //             document.write("O usuário é idoso");
+    // //         }
+    // //     }
+    // // }
+
+
+    // let funcaoMaioridade = function(idade, idadeParametro2){
+    //     if (idade >= idadeParametro2){
+    //         alert("Você é maior de idade");
+    //     } else {
+    //         alert("Você é menor de idade");
+    //     }
+    // }
+
+    // funcaoMaiorIdade(20, 18)
+
+
+
+
+// ALTERAÇOES DE ARRAYS
+
+// var coresPrimarias = ["azul", "amarelo", "vermelho", "branco", "preto"];
+// var coresSecundarias = ["verde", "laranja", "roxo", "rosa","cinza"];
+// var numeros = [5,3,7,1,0.5,5.4]
+
+
+// var concat = coresPrimarias.concat(coresSecundarias); //concatena os elementos de uma array com outra
+// var indexOf = coresPrimarias.indexOf("amarelo"); //localiza o elemento de uma string através do índice (iniciando em 0)
+// var join = coresPrimarias.join(); //transforma uma array em uma string, separada por vírgulas
+// var push = coresSecundarias.push("marrom"); //insere novo elemento no final de uma array (mas não mostra)
+// var pop = coresPrimarias.pop(); //remove o último elemento do array (mas não mostra)
+// var reverse = coresSecundarias.reverse(); //inverte a ordem do array
+// var shift = coresPrimarias.shift(); //remove o primeiro elemento do array (mas não mostra)
+// var sort = numeros.sort(); //coloca elementos em ordem crescente
+// var toString = coresSecundarias.toString(); //converte uma array em uma string
+// var unshift = coresPrimarias.unshift("marrom"); //insere um novo elemento no início do array
+// var splice = coresPrimarias.splice(1,2); //remove uma quantidade de elementos a partir da posiçao (exemplo, dois elementos a partir do indice 1)
+
+
+// console.log(concat); 
+// console.log(indexOf);
+// console.log(join);
+// console.log(push)
+// console.log(coresSecundarias); //mostrando depois do push
+// console.log(pop);
+// console.log(coresPrimarias); //mostrando depois do pop
+// console.log(reverse);
+// console.log(coresPrimarias);
+// console.log(sort);
+// console.log(toString);
+// console.log(unshift);
+// console.log(coresPrimarias); //mostrando depois do unshift
+// console.log(splice);
+
+
+// var nomeUsuario = prompt("Escreva seu nome");
+// var nomePai = prompt("Escreva o nome do seu pai");
+// var nomeMae = prompt("Escreva o nome da sua mãe")
+// var arrayFamilia = [nomeUsuario, nomePai, nomeMae];
+
+
+// if (arrayFamilia.indexOf("Antonio")!= (-1)) {
+//     document.write(nomePai + " é pai de " + nomeUsuario)
+// } else {
+//     document.write("O nome é inválido")
+// }
+
+
+
+
+// var verificarMembro = prompt("Escreva um nome");
+// var familiaFerreira = ["Marcos", "Antonio", "Vaneide", "André"];
+
+// if(familiaFerreira.indexOf(verificarMembro) == -1){
+//     document.write("Esta pessoa não faz parte da família")
+// } else {
+//     document.write("Esta pessoa faz parte da família");
+// }
+
+
+
+var fruta= document.createElement('li');
+var lista= document.querySelector('lista');
+var novo= document.querySelector('novo');
+var inserir= document.querySelector('inserir');
+
+function iniciar (){
+
+    inserir.addEventListener('click', ()=>{
+        fruta.textContent(novo);
+        document.body.appendChild(fruta);
+        
+    })
+}
+
+
+window.addEventListener('load', iniciar)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+<body>
+
+<input type="text" name="novo" id="novo">
+<input type="button" value="inserir" id="inserir">
+
+<ul id="lista">
+    <li></li>
+
+</ul>
+
+
+</body>
+
+
+</html>
