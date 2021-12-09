@@ -1,49 +1,44 @@
-window.onload = function(){
+window.onload = function() {
     
+    function resultadoCep(dadosCep){
     
-    let dadosCep = async function (cep){
-        let busca = cep.value;
-        let url = `http://viacep.com.br/ws/${Number(busca)}/json/` ;
-        try {
-            let dadosFetch = await fetch(url, {
-                mode: 'no-cors',
-                credentials: 'include'
-              });
-            let dadosJson = await dadosFetch.json();
-            console.log('dadosJson');
-        } catch (error){
-            alert(error);
-        }
-        
+    for( let campo in dadosCep ){
+        if(document.querySelector(`#${campo}`))
+        document.querySelector(`#${campo}`).value = dadosCep[campo];
+    }
+    
     }
     
     
-const cep = parseInt(document.getElementById('cep').value);
-const logradouro = document.getElementById('logradouro').value;
-const bairro = document.getElementById('bairro').value;
-const cidade = document.getElementById('cidade').value;
-const uf = document.getElementById('uf').value;
-const botao = document.getElementById('botao');
-botao.addEventListener('click', dadosCep);
-
-
-
-
-
-}
-
-function resultadoBusca(dadosBusca){
-    for( let dado in dadosBusca ){
-        if(document.querySelector(`#rua`)){
-            document.querySelector(`#rua`).value = dadosBusca;
-        } else {
-            alert('Cep não encontrado');
-        }
-        
+    
+    
+    let dadosCep = async function(cep){
+    
+        let url = `https://viacep.com.br/ws/${cep}/json/`;
+       try{
+        let dadosFetch = await fetch(url);
+        let dadosJson = await dadosFetch.json();
+        resultadoCep(dadosJson);
+       } catch(error){
+    
+       }
+    
+    
+        // console.log(dadosJson);
+    
     }
-}
-
-
-
-
-
+    
+    // dadosCep('87040130')
+    const btnBuscar = document.querySelector("#botao");
+    const CxCEP = document.querySelector("#cep");
+    
+    btnBuscar.addEventListener('click',function(){
+    
+        dadosCep(CxCEP.value);
+    
+    })
+    
+    
+    
+    
+    }
